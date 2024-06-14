@@ -1,5 +1,5 @@
 # PhotoTranslator: Generate Creative Sentences in a Foreign Language from a Photo
-The PhotoTranslator app leverages OpenAI's Vision API to bring translations into the user's surroundings seamlessly. Users can simply take a photo, and the app, using an on-device YOLO model, identifies objects within the image. Then, creative sentences in the target language are generated about the picture in general and each object specifically, making learning a new language an engaging and immersive experience.
+The PhotoTranslator app leverages OpenAI's Vision API to bring translations into the user's surroundings seamlessly. Users can simply take a photo, and the app, using an on-device YOLO model, identifies objects within the image. Then, creative sentences in the target language are generated about the picture in general and each object specifically along with the foreign language audio using ElevenLabs API, making learning a new language an engaging and immersive experience.
 
 ## Installation
 
