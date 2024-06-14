@@ -19,7 +19,7 @@ struct PhotoPromptManager {
         
         1. You will be given a picture for translation.
         2. Provide the answer in \(targetLanguage) with English transliteration and translation
-        3. Label the answer clearly with \(targetLanguage), transliteration, and translation
+        3. Label the answer clearly with \(targetLanguage) script, transliteration, and translation
         
         Use the `add_photo_analyses_to_db` function to the database.
         """
@@ -57,7 +57,7 @@ struct PhotoPromptManager {
         description: "The analysis of a photo object",
         properties: [
             "target_language_sentence" : JSONSchema(type: .string,
-                                 description: "\(targetLanguage) text that describes the labeled object in a rich and detailed way"),
+                                 description: "\(targetLanguage) text that describes the labeled object in a rich and detailed way in the \(targetLanguage) original script."),
             "english_transliteration" : JSONSchema(type: .string,
                                            description: "the transliteration of the \(targetLanguage) text in English characters"),
             "english_translation" : JSONSchema(type: .string,

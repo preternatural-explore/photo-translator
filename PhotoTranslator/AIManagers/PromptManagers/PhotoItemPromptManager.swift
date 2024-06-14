@@ -19,8 +19,8 @@ struct PhotoItemPromptManager {
         
         1. You will be given a picture for translation.
         2. The picture will highlight certain objects with rectangles labeled with numbers.
-        2. Provide the answer in \(targetLanguage) with English transliteration and translation
-        3. Label the answer clearly with \(targetLanguage), transliteration, and translation
+        2. Provide the answer in \(targetLanguage) script with English transliteration and translation
+        3. Label the answer clearly with \(targetLanguage) script, transliteration, and translation
         4. Only create sentences about the objects.
         5. Ignore rectangle and number labels when doing translation.
         
@@ -30,7 +30,7 @@ struct PhotoItemPromptManager {
     
     var listItemsUserPrompt: String {
         """
-        Only return the results: Create a rich, detailed sentence for each numbered object in this picture in \(targetLanguage). Include the English transliteration and translation, clearly labeled. And keep the numbers listed in order.
+        Only return the results: Create a rich, detailed sentence for each numbered object in this picture in \(targetLanguage) script. Include the English transliteration and translation, clearly labeled. And keep the numbers listed in order.
         """
     }
     
@@ -63,7 +63,7 @@ struct PhotoItemPromptManager {
             "object_number": JSONSchema(type: .integer,
                                         description: "the number label of the object in the photo"),
             "target_language_sentence" : JSONSchema(type: .string,
-                                 description: "\(targetLanguage) text that describes the labeled object in a rich and detailed way"),
+                                 description: "\(targetLanguage) text that describes the labeled object in a rich and detailed way in \(targetLanguage) script"),
             "english_transliteration" : JSONSchema(type: .string,
                                            description: "the transliteration of the \(targetLanguage) text in English characters"),
             "english_translation" : JSONSchema(type: .string,
