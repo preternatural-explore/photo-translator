@@ -59,6 +59,7 @@ struct PhotoTranslationView: View {
             .clipped()
         #if os(iOS)
             .frame(height: UIScreen.main.bounds.height / 2)
+            .fixedSize(horizontal: false, vertical: true)
         #endif
     }
     

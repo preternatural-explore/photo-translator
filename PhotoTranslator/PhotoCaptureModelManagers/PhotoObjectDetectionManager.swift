@@ -110,7 +110,7 @@ class PhotoObjectDetectionManager {
         guard (status == kCVReturnSuccess) else {
           return nil
         }
-
+        
         CVPixelBufferLockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
         let pixelData = CVPixelBufferGetBaseAddress(pixelBuffer!)
 
@@ -127,7 +127,7 @@ class PhotoObjectDetectionManager {
         #elseif os(macOS)
         NSGraphicsContext.saveGraphicsState()
         if let context = context {
-            NSGraphicsContext.current = NSGraphicsContext(cgContext: context, flipped: false)
+            NSGraphicsContext.current = NSGraphicsContext(cgContext: context, flipped: true)
         }
         image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
         NSGraphicsContext.restoreGraphicsState()

@@ -91,15 +91,13 @@ struct LLMClientManager {
                 }
             }
         ]
-                        
-        let completion = try await client.complete(
-            messages,
-            parameters: AbstractLLM.ChatCompletionParameters(
-                tokenLimit: .fixed(tokenLimit),
-                tools: [itemPromptManager.addPhotoAnalysesFunction]
-            )
-        )
         
-        return try completion._allFunctionCalls.first!.decode(PhotoItemPromptManager.AddTranslationResult.self).photoAnalyses
+        let functionCall: AbstractLLM.ChatFunctionCall = try await client.complete(
+                messages,
+                functions: [itemPromptManager.addPhotoAnalysesFunction],
+                as: .functionCall
+            )
+            
+        return try functionCall.decode(PhotoItemPromptManager.AddTranslationResult.self).photoAnalyses
     }
 }

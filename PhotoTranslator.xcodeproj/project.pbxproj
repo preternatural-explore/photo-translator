@@ -43,7 +43,6 @@
 		FAA7336A2C1BFB22005A000A /* swift-syntax in Resources */ = {isa = PBXBuildFile; fileRef = FAA7335D2C1BFB21005A000A /* swift-syntax */; };
 		FAA7336B2C1BFB22005A000A /* SwiftAPI in Resources */ = {isa = PBXBuildFile; fileRef = FAA7335E2C1BFB21005A000A /* SwiftAPI */; };
 		FAA7336C2C1BFB22005A000A /* SwiftUI-Introspect in Resources */ = {isa = PBXBuildFile; fileRef = FAA7335F2C1BFB21005A000A /* SwiftUI-Introspect */; };
-		FAA7336D2C1BFB22005A000A /* SwiftUIX in Resources */ = {isa = PBXBuildFile; fileRef = FAA733602C1BFB21005A000A /* SwiftUIX */; };
 		FAA7336E2C1BFB22005A000A /* SwiftUIZ in Resources */ = {isa = PBXBuildFile; fileRef = FAA733612C1BFB21005A000A /* SwiftUIZ */; };
 /* End PBXBuildFile section */
 
@@ -83,7 +82,6 @@
 		FAA7335D2C1BFB21005A000A /* swift-syntax */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "swift-syntax"; sourceTree = "<group>"; };
 		FAA7335E2C1BFB21005A000A /* SwiftAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftAPI; sourceTree = "<group>"; };
 		FAA7335F2C1BFB21005A000A /* SwiftUI-Introspect */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "SwiftUI-Introspect"; sourceTree = "<group>"; };
-		FAA733602C1BFB21005A000A /* SwiftUIX */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftUIX; sourceTree = "<group>"; };
 		FAA733612C1BFB21005A000A /* SwiftUIZ */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftUIZ; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -249,7 +247,6 @@
 				FAA7335D2C1BFB21005A000A /* swift-syntax */,
 				FAA7335E2C1BFB21005A000A /* SwiftAPI */,
 				FAA7335F2C1BFB21005A000A /* SwiftUI-Introspect */,
-				FAA733602C1BFB21005A000A /* SwiftUIX */,
 				FAA733612C1BFB21005A000A /* SwiftUIZ */,
 			);
 			path = Packages;
@@ -333,7 +330,6 @@
 				FAA733642C1BFB22005A000A /* CorePersistence in Resources */,
 				FAA733662C1BFB22005A000A /* Merge in Resources */,
 				FA20B8132BC0F95E00217CE6 /* Assets.xcassets in Resources */,
-				FAA7336D2C1BFB22005A000A /* SwiftUIX in Resources */,
 				FAA733632C1BFB22005A000A /* AI in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
