@@ -1,4 +1,5 @@
 # PhotoTranslator: Generate Creative Sentences in a Foreign Language from a Photo
+The PhotoTranslator app leverages OpenAI's Vision API to bring translations into the user's surroundings seamlessly. Users can simply take a photo, and the app, using an on-device YOLO model, identifies objects within the image. Then, creative sentences in the target language are generated about the picture in general and each object specifically, making learning a new language an engaging and immersive experience.
 
 ## Installation
 
@@ -48,3 +49,7 @@ struct HindiSpeaker: Speaker {
 7. Run the app on device - either iPhone, iPad or Mac as the camera is required to take a photo.
 8. Take a photo and wait for the app to generate creative sentences about the photo in your target language, with English translation.<br />
 *Bug: Note that there is currently a bug where the photo is flipped 90 degrees on the phone and iPad.*
+
+<img width="413" alt="phototranslationdescription" src="https://github.com/preternatural-explore/photo-translator/assets/1157147/41f472f5-769e-4ff6-aa55-697aba1cd711">
+<img width="413" alt="exportA25BFD02-B306-4936-87A7-FB421D9F21F1" src="https://github.com/preternatural-explore/photo-translator/assets/1157147/553e0bbb-5035-4790-968f-c21221a53c19">
+
