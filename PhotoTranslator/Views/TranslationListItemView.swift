@@ -12,7 +12,7 @@ struct TranslationListItemView: View {
     @StateObject var task: SpeakerTask = SpeakerTask()
     
     var body: some View {
-        VStack() {
+        VStack(alignment: .leading) {
             HStack {
                 Text("\(translationListItem.number). \(translationListItem.targetLanguageSentence)")
                     .font(.title)

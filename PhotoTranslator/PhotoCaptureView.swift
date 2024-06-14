@@ -18,7 +18,7 @@ struct PhotoCaptureView: View {
             VStack {
                 CameraViewReader { (cameraProxy: CameraViewProxy) in
                     
-                    CameraView(camera: .back, mirrored: false)
+                    CameraView()
                         .edgesIgnoringSafeArea(.all)
                         .safeAreaInset(edge: .bottom) {
                             

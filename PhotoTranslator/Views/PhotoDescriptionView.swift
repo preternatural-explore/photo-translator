@@ -12,7 +12,7 @@ struct PhotoDescriptionView: View {
     @StateObject var task: SpeakerTask = SpeakerTask()
     
     var body: some View {
-        VStack() {
+        VStack(alignment: .leading) {
             HStack {
                 Text(photoDescription.targetLanguageSentence)
                     .font(.title)
