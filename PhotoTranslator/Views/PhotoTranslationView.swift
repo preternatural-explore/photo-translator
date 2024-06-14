@@ -20,7 +20,7 @@ struct PhotoTranslationView: View {
         NavigationView {
             ScrollView {
                 if let numberedCapturePhoto = viewModel.numberedCapturePhoto {
-                    VStack() {
+                    LazyVStack() {
                         photoView(photo: numberedCapturePhoto)
                             .onAppear {
                                 Task {
@@ -41,6 +41,7 @@ struct PhotoTranslationView: View {
                                 circularProgressView()
                             }
                         }
+                        .fixedSize(horizontal: false, vertical: true)
                 } else {
                     ZStack {
                         photoView(photo: viewModel.originalCapturePhoto)
@@ -57,10 +58,11 @@ struct PhotoTranslationView: View {
             .resizable()
             .aspectRatio(contentMode: .fill)
             .clipped()
-        #if os(iOS)
-            .frame(height: UIScreen.main.bounds.height / 2)
-            .fixedSize(horizontal: false, vertical: true)
-        #endif
+#if os(iOS)
+            .frame(maxHeight: UIScreen.main.bounds.height / 2)
+#else
+            .frame(maxHeight: 300)
+#endif
     }
     
     @ViewBuilder

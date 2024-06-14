@@ -18,14 +18,13 @@ struct PhotoDescriptionView: View {
                     .font(.title)
                     .foregroundColor(.primary)
                     .lineLimit(nil)
-                    .fixedSize(horizontal: true, vertical: false)
                 SpeakButton(task: task, text: photoDescription.targetLanguageSentence)
             }
-            .frame(maxWidth: .infinity)
             Text(photoDescription.englishTransliteration)
                 .italic()
             Text(photoDescription.englishTranslation)
         }
+        .padding()
     }
 }
 

@@ -15,10 +15,12 @@ class PhotoObjectDetectionManager {
     private let image: AppKitOrUIKitImage
     
     private let colors = (0...80).map { _ in
-        AppKitOrUIKitColor(red: CGFloat.random(in: 0...1),
-                green: CGFloat.random(in: 0...1),
-                blue: CGFloat.random(in: 0...1),
-                alpha: 1) }
+        AppKitOrUIKitColor(
+            red: CGFloat.random(in: 0...1),
+            green: CGFloat.random(in: 0...1),
+            blue: CGFloat.random(in: 0...1),
+            alpha: 1)
+    }
     private let ciContext = CIContext()
     
     init(image: AppKitOrUIKitImage) {
@@ -46,7 +48,7 @@ class PhotoObjectDetectionManager {
                     continuation.resume(returning: self.image)
                     return
                 }
-
+                
                 let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:])
                 do {
                     try handler.perform([self.yoloRequest])
@@ -73,7 +75,7 @@ class PhotoObjectDetectionManager {
                                     width: result.boundingBox.width,
                                     height: result.boundingBox.height)
             let box = VNImageRectForNormalizedRect(flippedBox, Int(image.size.width), Int(image.size.height))
-
+            
             let detection = PhotoObjectDetection(id: index + 1,
                                                  box: box,
                                                  color: colors[index])
@@ -108,33 +110,33 @@ class PhotoObjectDetectionManager {
         var pixelBuffer: CVPixelBuffer?
         let status = CVPixelBufferCreate(kCFAllocatorDefault, Int(image.size.width), Int(image.size.height), kCVPixelFormatType_32ARGB, attrs, &pixelBuffer)
         guard (status == kCVReturnSuccess) else {
-          return nil
+            return nil
         }
         
         CVPixelBufferLockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
         let pixelData = CVPixelBufferGetBaseAddress(pixelBuffer!)
-
+        
         let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
         let context = CGContext(data: pixelData, width: Int(image.size.width), height: Int(image.size.height), bitsPerComponent: 8, bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!), space: rgbColorSpace, bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue)
-
+        
         context?.translateBy(x: 0, y: image.size.height)
         context?.scaleBy(x: 1.0, y: -1.0)
-
-        #if os(iOS)
+        
+#if os(iOS)
         UIGraphicsPushContext(context!)
         image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
         UIGraphicsPopContext()
-        #elseif os(macOS)
+#elseif os(macOS)
         NSGraphicsContext.saveGraphicsState()
         if let context = context {
             NSGraphicsContext.current = NSGraphicsContext(cgContext: context, flipped: true)
         }
         image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
         NSGraphicsContext.restoreGraphicsState()
-        #endif
+#endif
         
         CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
-
+        
         return pixelBuffer
-      }
+    }
 }
