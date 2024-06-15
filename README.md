@@ -1,9 +1,45 @@
+> [!IMPORTANT]
+> Created by [Preternatural AI](https://preternatural.ai/), an exhaustive client-side AI infrastructure for Swift.<br/>
+> This project and the frameworks used are presently in alpha stage of development.
+
 # PhotoTranslator: Generate Creative Sentences in a Foreign Language from a Photo
 The PhotoTranslator app leverages OpenAI's Vision API to bring translations into the user's surroundings seamlessly. Users can simply take a photo, and the app, using an on-device YOLO model, identifies objects within the image. Then, creative sentences in the target language are generated about the picture in general and each object specifically along with the foreign language audio using ElevenLabs API, making learning a new language an engaging and immersive experience.
+<br/><br/>
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/PreternaturalAI/AI/blob/main/LICENSE)
 
-## Installation
+## Table of Contents
+- [Usage](#usage)
+- [Key Concepts](#key-concepts)
+- [Preternatural Frameworks](#preternatural-frameworks)
+- [License](#license)
+  
+## Usage
+#### Supported Platforms
+<!-- macOS-->
+<p align="left">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/PreternaturalAI/AI/main/Images/macos.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/PreternaturalAI/AI/main/Images/macos-active.svg">
+  <img alt="macos" src="https://raw.githubusercontent.com/PreternaturalAI/AI/main/Images/macos-active.svg" height="24">
+</picture>&nbsp;
 
-To run the Photo Translator app: 
+<!--iPhone-->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/PreternaturalAI/AI/main/Images/ios.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/PreternaturalAI/AI/main/Images/ios-active.svg">
+  <img alt="ios" src="https://raw.githubusercontent.com/PreternaturalAI/AI/main/Images/ios-active.svg" height="24">
+</picture>&nbsp;
+
+<!-- iPad-->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/PreternaturalAI/AI/main/Images/ipados.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/PreternaturalAI/AI/main/Images/ipados-active.svg">
+  <img alt="ipados" src="https://raw.githubusercontent.com/PreternaturalAI/AI/main/Images/ipados-active.svg" height="24">
+</picture>&nbsp;
+
+</p>
+
+To install and run the PhotoTranslator app:
 
 1. Download and open the project
 2. Add your OpenAI API Key in the `LLMClientManager`  file:
@@ -49,8 +85,26 @@ struct HindiSpeaker: Speaker {
 7. Run the app on device - either iPhone, iPad or Mac as the camera is required to take a photo.
 8. Take a photo and wait for the app to generate creative sentences about the photo in your target language, with English translation.<br />
 
-<img width="413" alt="phototranslationdescription" src="https://github.com/preternatural-explore/photo-translator/assets/1157147/41f472f5-769e-4ff6-aa55-697aba1cd711">
-<img width="413" alt="exportA25BFD02-B306-4936-87A7-FB421D9F21F1" src="https://github.com/preternatural-explore/photo-translator/assets/1157147/553e0bbb-5035-4790-968f-c21221a53c19">
+<p align="center">
+  <img width="413" alt="phototranslationdescription" src="https://github.com/preternatural-explore/photo-translator/assets/1157147/41f472f5-769e-4ff6-aa55-697aba1cd711">
+  <img width="413" alt="phototranslationdetails" src="https://github.com/preternatural-explore/photo-translator/assets/1157147/553e0bbb-5035-4790-968f-c21221a53c19">
+</p>
 
 *Bug: Note that there is currently a bug where the photo is flipped 90 degrees on the phone and iPad.*<br/>
+
+## Key Concepts
+The PhotoTranslator app is developed to demonstrate the the following key concepts:
+
+- Using OpenAI's Vision API
+- Function calling to get structured data from LLMs
+- Integrating ElevenLabs Multilingual Audio generation
+
+## Preternatural Frameworks
+The following Preternatural Frameworks were used in this project: 
+- [AI](https://github.com/PreternaturalAI/AI): The definitive, open-source Swift framework for interfacing with generative AI.
+- [Media](https://github.com/vmanot/Media): Media makes it stupid simple to work with media capture & playback in Swift.
+
+# License
+
+This package is licensed under the [MIT License](https://github.com/PreternaturalAI/AI/blob/main/LICENSE).
 
