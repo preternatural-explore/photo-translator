@@ -59,7 +59,18 @@ struct LLMClientManager {
             )
         )
         
-        return try completion._allFunctionCalls.first?.decode(PhotoPromptManager.AddTranslationResult.self).photoAnalysis
+        let parameters = AbstractLLM.ChatCompletionParameters(
+            tokenLimit: .fixed(tokenLimit)
+        )
+        
+        let functionCall: AbstractLLM.ChatFunctionCall = try await client.complete(
+                messages,
+                parameters: parameters,
+                functions: [itemPromptManager.addPhotoAnalysesFunction],
+                as: AbstractLLM.ChatFunctionCall.self
+            )
+        
+        return try functionCall.decode(PhotoPromptManager.AddTranslationResult.self).photoAnalysis
     }
     
     static func listItems(
