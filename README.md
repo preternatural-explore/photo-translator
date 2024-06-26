@@ -11,6 +11,7 @@ The PhotoTranslator app leverages OpenAI's Vision API to bring translations into
 - [Usage](#usage)
 - [Key Concepts](#key-concepts)
 - [Preternatural Frameworks](#preternatural-frameworks)
+- [Technical Specifications](#technical-specifications)
 - [License](#license)
   
 ## Usage
@@ -103,6 +104,15 @@ The PhotoTranslator app is developed to demonstrate the the following key concep
 The following Preternatural Frameworks were used in this project: 
 - [AI](https://github.com/PreternaturalAI/AI): The definitive, open-source Swift framework for interfacing with generative AI.
 - [Media](https://github.com/vmanot/Media): Media makes it stupid simple to work with media capture & playback in Swift.
+
+## Technical Specifications
+The PhotoTranslator uses several AI frameworks in the following steps: 
+1. The user captures a photo
+2. The photo is analyzed by the [YOLOv8](https://github.com/ultralytics/ultralytics) on-device model, which detects and identifies individual objects within the image. Each object is highlighted with uniquely colored, numbered boxes. See `PhotoObjectDetectionManager` for the implementation. 
+3. The processed photo is sent to OpenAI using the completion API with function calling. This step involves generating creative sentences in the apps's target language about the picture as a whole and each individual object identified in the picture. Transliteration and english translation is also provided for each sentence. See `LLMClientManager` for implementation. 
+4. Finally, the translated text is converted into spoken audio using ElevenLabs' voice synthesis technology, so the user can learn how to say the sentence in the app's target foreign language. See `TTSClientManager` for implementation.
+
+As a result, the PhotoTranslator app exemplifies the effective integration of diverse AI technologies to create a comprehensive and interactive language learning tool. 
 
 ## License
 
