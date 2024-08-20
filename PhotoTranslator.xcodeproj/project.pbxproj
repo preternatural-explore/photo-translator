@@ -33,17 +33,6 @@
 		FA9CA9B02BCBC852002CD535 /* PhotoDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CA9AF2BCBC852002CD535 /* PhotoDescription.swift */; };
 		FA9CA9B22BCBCDFB002CD535 /* PhotoDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CA9B12BCBCDFB002CD535 /* PhotoDescriptionView.swift */; };
 		FAA733552C1BFA3B005A000A /* AI in Frameworks */ = {isa = PBXBuildFile; productRef = FAA733542C1BFA3B005A000A /* AI */; };
-		FAA733632C1BFB22005A000A /* AI in Resources */ = {isa = PBXBuildFile; fileRef = FAA733562C1BFB21005A000A /* AI */; };
-		FAA733642C1BFB22005A000A /* CorePersistence in Resources */ = {isa = PBXBuildFile; fileRef = FAA733572C1BFB21005A000A /* CorePersistence */; };
-		FAA733652C1BFB22005A000A /* Media in Resources */ = {isa = PBXBuildFile; fileRef = FAA733582C1BFB21005A000A /* Media */; };
-		FAA733662C1BFB22005A000A /* Merge in Resources */ = {isa = PBXBuildFile; fileRef = FAA733592C1BFB21005A000A /* Merge */; };
-		FAA733672C1BFB22005A000A /* NetworkKit in Resources */ = {isa = PBXBuildFile; fileRef = FAA7335A2C1BFB21005A000A /* NetworkKit */; };
-		FAA733682C1BFB22005A000A /* Swallow in Resources */ = {isa = PBXBuildFile; fileRef = FAA7335B2C1BFB21005A000A /* Swallow */; };
-		FAA733692C1BFB22005A000A /* swift-collections in Resources */ = {isa = PBXBuildFile; fileRef = FAA7335C2C1BFB21005A000A /* swift-collections */; };
-		FAA7336A2C1BFB22005A000A /* swift-syntax in Resources */ = {isa = PBXBuildFile; fileRef = FAA7335D2C1BFB21005A000A /* swift-syntax */; };
-		FAA7336B2C1BFB22005A000A /* SwiftAPI in Resources */ = {isa = PBXBuildFile; fileRef = FAA7335E2C1BFB21005A000A /* SwiftAPI */; };
-		FAA7336C2C1BFB22005A000A /* SwiftUI-Introspect in Resources */ = {isa = PBXBuildFile; fileRef = FAA7335F2C1BFB21005A000A /* SwiftUI-Introspect */; };
-		FAA7336E2C1BFB22005A000A /* SwiftUIZ in Resources */ = {isa = PBXBuildFile; fileRef = FAA733612C1BFB21005A000A /* SwiftUIZ */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,17 +61,6 @@
 		FA9CA9AD2BCBC562002CD535 /* PhotoPromptManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPromptManager.swift; sourceTree = "<group>"; };
 		FA9CA9AF2BCBC852002CD535 /* PhotoDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDescription.swift; sourceTree = "<group>"; };
 		FA9CA9B12BCBCDFB002CD535 /* PhotoDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDescriptionView.swift; sourceTree = "<group>"; };
-		FAA733562C1BFB21005A000A /* AI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AI; sourceTree = "<group>"; };
-		FAA733572C1BFB21005A000A /* CorePersistence */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CorePersistence; sourceTree = "<group>"; };
-		FAA733582C1BFB21005A000A /* Media */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Media; sourceTree = "<group>"; };
-		FAA733592C1BFB21005A000A /* Merge */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Merge; sourceTree = "<group>"; };
-		FAA7335A2C1BFB21005A000A /* NetworkKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkKit; sourceTree = "<group>"; };
-		FAA7335B2C1BFB21005A000A /* Swallow */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Swallow; sourceTree = "<group>"; };
-		FAA7335C2C1BFB21005A000A /* swift-collections */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "swift-collections"; sourceTree = "<group>"; };
-		FAA7335D2C1BFB21005A000A /* swift-syntax */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "swift-syntax"; sourceTree = "<group>"; };
-		FAA7335E2C1BFB21005A000A /* SwiftAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftAPI; sourceTree = "<group>"; };
-		FAA7335F2C1BFB21005A000A /* SwiftUI-Introspect */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "SwiftUI-Introspect"; sourceTree = "<group>"; };
-		FAA733612C1BFB21005A000A /* SwiftUIZ */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftUIZ; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +94,6 @@
 		FA20B8022BC0F95D00217CE6 = {
 			isa = PBXGroup;
 			children = (
-				FAA733622C1BFB21005A000A /* Packages */,
 				FA20B80D2BC0F95D00217CE6 /* PhotoTranslator */,
 				FA20B80C2BC0F95D00217CE6 /* Products */,
 				FA134D412BC105E7008935CD /* Frameworks */,
@@ -234,24 +211,6 @@
 			path = PromptManagers;
 			sourceTree = "<group>";
 		};
-		FAA733622C1BFB21005A000A /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				FAA733562C1BFB21005A000A /* AI */,
-				FAA733572C1BFB21005A000A /* CorePersistence */,
-				FAA733582C1BFB21005A000A /* Media */,
-				FAA733592C1BFB21005A000A /* Merge */,
-				FAA7335A2C1BFB21005A000A /* NetworkKit */,
-				FAA7335B2C1BFB21005A000A /* Swallow */,
-				FAA7335C2C1BFB21005A000A /* swift-collections */,
-				FAA7335D2C1BFB21005A000A /* swift-syntax */,
-				FAA7335E2C1BFB21005A000A /* SwiftAPI */,
-				FAA7335F2C1BFB21005A000A /* SwiftUI-Introspect */,
-				FAA733612C1BFB21005A000A /* SwiftUIZ */,
-			);
-			path = Packages;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -318,19 +277,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAA733682C1BFB22005A000A /* Swallow in Resources */,
-				FAA7336C2C1BFB22005A000A /* SwiftUI-Introspect in Resources */,
-				FAA7336A2C1BFB22005A000A /* swift-syntax in Resources */,
-				FAA7336E2C1BFB22005A000A /* SwiftUIZ in Resources */,
-				FAA733692C1BFB22005A000A /* swift-collections in Resources */,
 				FA20B8162BC0F95E00217CE6 /* Preview Assets.xcassets in Resources */,
-				FAA7336B2C1BFB22005A000A /* SwiftAPI in Resources */,
-				FAA733672C1BFB22005A000A /* NetworkKit in Resources */,
-				FAA733652C1BFB22005A000A /* Media in Resources */,
-				FAA733642C1BFB22005A000A /* CorePersistence in Resources */,
-				FAA733662C1BFB22005A000A /* Merge in Resources */,
 				FA20B8132BC0F95E00217CE6 /* Assets.xcassets in Resources */,
-				FAA733632C1BFB22005A000A /* AI in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

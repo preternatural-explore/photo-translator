@@ -1,8 +1,0 @@
-//
-// Copyright (c) Vatsal Manot
-//
-
-module _RuntimeC {
-    header "_RuntimeC.h"
-    export *
-}
