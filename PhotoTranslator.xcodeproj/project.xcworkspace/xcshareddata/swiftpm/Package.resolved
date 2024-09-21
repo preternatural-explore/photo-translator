@@ -16,7 +16,7 @@
       "location" : "https://github.com/vmanot/CorePersistence.git",
       "state" : {
         "branch" : "main",
-        "revision" : "f2af48f1ccff49b79691d13e16a5315b828c3a09"
+        "revision" : "f9d7c167e6fbf8cbde442e19c4e93c825737321e"
       }
     },
     {
@@ -25,7 +25,7 @@
       "location" : "https://github.com/vmanot/Media",
       "state" : {
         "branch" : "main",
-        "revision" : "bd168a4daa8a6b46e58aff23bc8d28361432f22c"
+        "revision" : "ceb7c635ae4e216648f688e53b9fab5bd117a23f"
       }
     },
     {
@@ -34,7 +34,7 @@
       "location" : "https://github.com/vmanot/Merge.git",
       "state" : {
         "branch" : "master",
-        "revision" : "669ef226c661fb34f979b24a54501ff454afc3f9"
+        "revision" : "70493ddf02b895fe9fbc922f0ecbb070c77ba7b9"
       }
     },
     {
@@ -52,7 +52,7 @@
       "location" : "https://github.com/vmanot/Swallow.git",
       "state" : {
         "branch" : "master",
-        "revision" : "a0ae02991f03f9b6e98e7848cba9f92df111bf02"
+        "revision" : "4de02e8d8ba0ce792dd1babfbaad1de97eed80e3"
       }
     },
     {
@@ -60,8 +60,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-collections",
       "state" : {
-        "revision" : "3d2dc41a01f9e49d84f0a3925fb858bed64f702d",
-        "version" : "1.1.2"
+        "revision" : "9bf03ff58ce34478e66aaee630e491823326fd06",
+        "version" : "1.1.3"
       }
     },
     {
@@ -79,7 +79,7 @@
       "location" : "https://github.com/vmanot/SwiftAPI.git",
       "state" : {
         "branch" : "master",
-        "revision" : "8971a1d4e5881b954127f50288cfc51372d36a7c"
+        "revision" : "c21d54e6057fa0331606417d51989aa501b348e2"
       }
     },
     {
@@ -97,7 +97,7 @@
       "location" : "https://github.com/SwiftUIX/SwiftUIX.git",
       "state" : {
         "branch" : "master",
-        "revision" : "74c0e5f9ada8b9af653e22a7dd3f2227966f8e6d"
+        "revision" : "d337fc58b4a1eb92fb0b161d5343a0760488c597"
       }
     },
     {
@@ -106,7 +106,7 @@
       "location" : "https://github.com/SwiftUIX/SwiftUIZ.git",
       "state" : {
         "branch" : "main",
-        "revision" : "18e2a975ba6496de7d29d13ab8752c0af7f322d2"
+        "revision" : "3cb3b876a05e21827d178ea186d5110c883418e5"
       }
     }
   ],
